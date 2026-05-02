@@ -6,8 +6,8 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --font-sans: var(--font-inter);
+    --font-display: var(--font-fraunces);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -41,39 +41,42 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
-    /* Uinta Clean and Green Brand Colors */
-    --color-brand-primary: #1e3a8a;
-    --color-brand-secondary: #3b82f6;
-    --color-brand-accent: #60a5fa;
-    --color-brand-water: #0ea5e9;
+
+    /* Uintah Home Services brand palette */
+    --color-brand-primary: #073760;
+    --color-brand-primary-foreground: #ffffff;
+    --color-brand-accent: #1dcad5;
+    --color-brand-accent-foreground: #073760;
+    --color-brand-highlight: #f4fcfe;
+    --color-brand-cream: #fafaf7;
+    --color-brand-ink: #0b1622;
 }
 
 :root {
     --radius: 0.625rem;
     --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
+    --foreground: oklch(0.18 0.03 240);
     --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
+    --card-foreground: oklch(0.18 0.03 240);
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.35 0.15 244);
-    /* #1e3a8a - Primary Blue */
-    --primary-foreground: oklch(1 0 0);
-    --secondary: oklch(0.55 0.15 244);
-    /* #3b82f6 - Secondary Blue */
-    --secondary-foreground: oklch(1 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.7 0.12 244);
-    /* #60a5fa - Accent Blue */
-    --accent-foreground: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.18 0.03 240);
+    /* #073760 \u2014 dark blue */
+    --primary: oklch(0.34 0.09 244);
+    --primary-foreground: oklch(0.99 0.01 200);
+    /* #1DCAD5 \u2014 light blue / accent */
+    --secondary: oklch(0.78 0.12 200);
+    --secondary-foreground: oklch(0.18 0.03 240);
+    --muted: oklch(0.97 0.005 220);
+    --muted-foreground: oklch(0.45 0.02 240);
+    --accent: oklch(0.78 0.12 200);
+    --accent-foreground: oklch(0.18 0.03 240);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.646 0.222 41.116);
-    --chart-2: oklch(0.6 0.118 184.704);
-    --chart-3: oklch(0.398 0.07 227.392);
+    --border: oklch(0.92 0.005 220);
+    --input: oklch(0.92 0.005 220);
+    --ring: oklch(0.34 0.09 244);
+    --chart-1: oklch(0.34 0.09 244);
+    --chart-2: oklch(0.78 0.12 200);
+    --chart-3: oklch(0.55 0.1 220);
     --chart-4: oklch(0.828 0.189 84.429);
     --chart-5: oklch(0.769 0.188 70.08);
     --sidebar: oklch(0.985 0 0);
@@ -93,18 +96,18 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
+    --primary: oklch(0.78 0.12 200);
+    --primary-foreground: oklch(0.18 0.03 240);
     --secondary: oklch(0.269 0 0);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.269 0 0);
     --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
+    --accent: oklch(0.78 0.12 200);
+    --accent-foreground: oklch(0.18 0.03 240);
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 10%);
     --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
+    --ring: oklch(0.78 0.12 200);
     --chart-1: oklch(0.488 0.243 264.376);
     --chart-2: oklch(0.696 0.17 162.48);
     --chart-3: oklch(0.769 0.188 70.08);
@@ -127,5 +130,13 @@
 
     body {
         @apply bg-background text-foreground;
+        font-feature-settings: "ss01", "cv11";
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-display), Georgia, serif;
+        letter-spacing: -0.015em;
     }
 }
