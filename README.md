@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uintah Home Services website
 
-## Getting Started
+Next.js 15 (App Router) marketing site for [uintahhomeservice.com](https://uintahhomeservice.com).
 
-First, run the development server:
+## Stack
+
+- Next.js 15 + React 19, TypeScript, Tailwind v4
+- shadcn/ui (`new-york` style) + lucide-react
+- React Hook Form + Zod for form handling
+- Resend for transactional email (quote + contact form leads)
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Builds use **Turbopack** (`next build --turbopack`) because webpack has a compatibility issue with the current versions of `@radix-ui/react-select` ESM modules and zod v4. Turbopack handles them correctly.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+Copy `.env.example` to `.env.local` and fill in:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Server-only secret. Do NOT prefix with NEXT_PUBLIC_.
+RESEND_API_KEY=re_xxx
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The form submissions in `/quote` and `/contact` send email to `orson@uintahhomeservice.com` via Resend. If `RESEND_API_KEY` is missing the action falls back gracefully and logs the submission to the server console (so the form still appears to succeed during local development without a real key).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Setting up Resend (one-time)
 
-## Deploy on Vercel
+1. Create a Resend account at [resend.com](https://resend.com).
+2. Add the domain `uintahhomeservice.com` and add the SPF, DKIM, and DMARC DNS records Resend provides. Wait for verification (usually within an hour).
+3. Create an API key and put it in `.env.local` as `RESEND_API_KEY`.
+4. The `from` address for outgoing email is `quotes@uintahhomeservice.com` \u2014 once the domain is verified that address works automatically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project layout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/
+    actions/send-lead.ts          \u2014 server action that emails leads via Resend
+    services/[trade]/page.tsx     \u2014 dynamic per-trade landing pages
+    sitemap.ts, robots.ts          \u2014 SEO baseline
+    icon.tsx, apple-icon.tsx,
+    opengraph-image.tsx            \u2014 generated favicon + OG image
+  components/
+    Header.tsx, Footer.tsx
+    ui/                            \u2014 shadcn components
+  lib/
+    site.ts                        \u2014 brand strings, contact info, hours, areas
+    services.ts                    \u2014 the 4 trades + their copy/sub-services/FAQs
+    site-images.ts                 \u2014 Unsplash registry per trade
+public/
+  logo-full.svg, logo-logo.svg
+```
+
+### Editing content
+
+- **Brand strings, contact info, hours, areas:** [`src/lib/site.ts`](src/lib/site.ts)
+- **Services + copy + FAQs:** [`src/lib/services.ts`](src/lib/services.ts)
+- **Photography:** [`src/lib/site-images.ts`](src/lib/site-images.ts) \u2014 swap any Unsplash URL for a real Orson-team photo, then push.
+
+## Deploy
+
+The repo is set up to deploy on Vercel without further config. After the first deploy, set the `RESEND_API_KEY` environment variable in the Vercel project settings.

@@ -60,10 +60,10 @@
     --card-foreground: oklch(0.18 0.03 240);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.18 0.03 240);
-    /* #073760 \u2014 dark blue */
+    /* #073760 — dark blue */
     --primary: oklch(0.34 0.09 244);
     --primary-foreground: oklch(0.99 0.01 200);
-    /* #1DCAD5 \u2014 light blue / accent */
+    /* #1DCAD5 — light blue / accent */
     --secondary: oklch(0.78 0.12 200);
     --secondary-foreground: oklch(0.18 0.03 240);
     --muted: oklch(0.97 0.005 220);

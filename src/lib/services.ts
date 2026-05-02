@@ -50,9 +50,9 @@ export const services: Service[] = [
         icon: Hammer,
         tagline: "Your to-do list, done right.",
         summary:
-            "From sticky doors to busted drywall, we knock out the jobs you've been putting off \u2014 carefully, on time, and cleaned up after.",
+            "From sticky doors to busted drywall, we knock out the jobs you've been putting off — carefully, on time, and cleaned up after.",
         description:
-            "Most homes have a running list: a fence picket that finally gave way, a ceiling fan still in the box, a fix that 'shouldn't take long.' We handle exactly that. One visit, one truck, one bill \u2014 honest work for the kind of jobs that don't quite need a specialist.",
+            "Most homes have a running list: a fence picket that finally gave way, a ceiling fan still in the box, a fix that 'shouldn't take long.' We handle exactly that. One visit, one truck, one bill — honest work for the kind of jobs that don't quite need a specialist.",
         keywords: [
             "handyman Vernal UT",
             "home repair Roosevelt",
@@ -72,7 +72,7 @@ export const services: Service[] = [
             {
                 name: "Door & window adjustments",
                 description:
-                    "Sticky doors, drafty weatherstripping, broken handles, soft latches \u2014 small fixes that make a big difference.",
+                    "Sticky doors, drafty weatherstripping, broken handles, soft latches — small fixes that make a big difference.",
             },
             {
                 name: "Fence & deck repair",
@@ -110,7 +110,7 @@ export const services: Service[] = [
         faqs: [
             {
                 question: "Is there a minimum charge?",
-                answer: "Yes \u2014 we have a small minimum to make the trip worthwhile. For most folks it's covered by 2-3 small items on the list, so it pays to batch them up.",
+                answer: "Yes — we have a small minimum to make the trip worthwhile. For most folks it's covered by 2-3 small items on the list, so it pays to batch them up.",
             },
             {
                 question: "Do you handle electrical or plumbing?",
@@ -129,9 +129,9 @@ export const services: Service[] = [
         icon: Droplets,
         tagline: "Clear gutters, dry foundation, no surprises.",
         summary:
-            "We pull every leaf, twig, and roof grit out of your gutters, flush the downspouts, and check for damage \u2014 before the next storm finds it for you.",
+            "We pull every leaf, twig, and roof grit out of your gutters, flush the downspouts, and check for damage — before the next storm finds it for you.",
         description:
-            "Clogged gutters are how small problems become expensive ones \u2014 ice dams, fascia rot, foundation pooling, basement leaks. We do it the slow, thorough way: clear by hand, flush with water, and inspect the entire run while we're up there.",
+            "Clogged gutters are how small problems become expensive ones — ice dams, fascia rot, foundation pooling, basement leaks. We do it the slow, thorough way: clear by hand, flush with water, and inspect the entire run while we're up there.",
         keywords: [
             "gutter cleaning Vernal",
             "gutter cleaning Roosevelt UT",
@@ -184,7 +184,7 @@ export const services: Service[] = [
         faqs: [
             {
                 question: "How often should I have my gutters cleaned?",
-                answer: "In the Basin, twice a year is the sweet spot \u2014 late spring after the cottonwoods drop, and late fall after the leaves come down. Homes with heavy tree cover need more.",
+                answer: "In the Basin, twice a year is the sweet spot — late spring after the cottonwoods drop, and late fall after the leaves come down. Homes with heavy tree cover need more.",
             },
             {
                 question: "Do you handle two-story homes?",
@@ -192,7 +192,7 @@ export const services: Service[] = [
             },
             {
                 question: "What if you find damage?",
-                answer: "We send you photos and a plain-English description of what we'd recommend. No pressure \u2014 you decide whether we fix it now, later, or leave it alone.",
+                answer: "We send you photos and a plain-English description of what we'd recommend. No pressure — you decide whether we fix it now, later, or leave it alone.",
             },
         ],
     },
@@ -205,7 +205,7 @@ export const services: Service[] = [
         summary:
             "Interior, exterior, fences, decks. We prep like we mean it, mask like we live there, and use paint that holds up to Uintah Basin winters.",
         description:
-            "A paint job is mostly prep \u2014 scraping, sanding, washing, masking, priming. That's where most jobs go wrong, and it's where we slow down. The actual painting is the easy part if you've done the rest right.",
+            "A paint job is mostly prep — scraping, sanding, washing, masking, priming. That's where most jobs go wrong, and it's where we slow down. The actual painting is the easy part if you've done the rest right.",
         keywords: [
             "painter Vernal UT",
             "exterior painting Uintah Basin",
@@ -259,7 +259,7 @@ export const services: Service[] = [
         faqs: [
             {
                 question: "What paint brands do you use?",
-                answer: "Sherwin-Williams and Benjamin Moore for most jobs. We'll use whatever you prefer if you have a brand loyalty \u2014 just no contractor-grade bargain paint.",
+                answer: "Sherwin-Williams and Benjamin Moore for most jobs. We'll use whatever you prefer if you have a brand loyalty — just no contractor-grade bargain paint.",
             },
             {
                 question: "How long does an exterior job take?",
@@ -278,7 +278,7 @@ export const services: Service[] = [
         icon: SprayCan,
         tagline: "Years of grime, gone in an afternoon.",
         summary:
-            "Siding, driveways, decks, sidewalks, fences, trash cans, and soft-wash for roofs. The right pressure for each surface \u2014 nothing damaged, everything cleaner.",
+            "Siding, driveways, decks, sidewalks, fences, trash cans, and soft-wash for roofs. The right pressure for each surface — nothing damaged, everything cleaner.",
         description:
             "Pressure washing isn't about blasting things hard. It's about matching the right pressure, water temperature, and detergent to each surface. We soft-wash siding and roofs with low pressure and the proper cleaners. We use higher pressure for concrete and pavers. The result is the same: it looks new.",
         keywords: [
@@ -312,7 +312,7 @@ export const services: Service[] = [
             {
                 name: "Fences",
                 description:
-                    "Wood and vinyl fences \u2014 we pull off years of dust, mildew, and pollen so they look painted again. Pairs well with our staining service.",
+                    "Wood and vinyl fences — we pull off years of dust, mildew, and pollen so they look painted again. Pairs well with our staining service.",
             },
             {
                 name: "Trash & recycling cans",
@@ -322,7 +322,7 @@ export const services: Service[] = [
             {
                 name: "Roof soft wash",
                 description:
-                    "Asphalt shingles cleaned with low-pressure soft wash and a proper cleaning solution \u2014 never blasted. Kills the algae streaks at the source.",
+                    "Asphalt shingles cleaned with low-pressure soft wash and a proper cleaning solution — never blasted. Kills the algae streaks at the source.",
             },
         ],
         process: [
@@ -345,11 +345,11 @@ export const services: Service[] = [
         faqs: [
             {
                 question: "Will pressure washing damage my siding or roof?",
-                answer: "Not when it's done right. We use low-pressure soft washing on siding and roofs, with cleaners that do the actual work \u2014 not pressure. High pressure goes on concrete and brick, never on shingles.",
+                answer: "Not when it's done right. We use low-pressure soft washing on siding and roofs, with cleaners that do the actual work — not pressure. High pressure goes on concrete and brick, never on shingles.",
             },
             {
                 question: "Do you serve commercial properties?",
-                answer: "Yes \u2014 storefronts, parking lots, trash enclosures, and fleet washing. Call for a custom quote.",
+                answer: "Yes — storefronts, parking lots, trash enclosures, and fleet washing. Call for a custom quote.",
             },
             {
                 question: "How often should trash cans be cleaned?",
@@ -357,7 +357,7 @@ export const services: Service[] = [
             },
         ],
         extraNote:
-            "Commercial properties also welcome \u2014 call for a custom quote.",
+            "Commercial properties also welcome — call for a custom quote.",
     },
 ]
 

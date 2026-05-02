@@ -22,7 +22,7 @@ export const site = {
     },
     serviceAreas: ["Vernal", "Naples", "Roosevelt"],
     hours: {
-        weekdays: "Monday \u2013 Saturday: 7AM \u2013 7PM",
+        weekdays: "Monday – Saturday: 7AM – 7PM",
         weekend: "Sunday: By appointment",
     },
     social: {
